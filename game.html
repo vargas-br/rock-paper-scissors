@@ -7,8 +7,78 @@
 <body>
   <script>
     // Your JavaScript goes here!
+
+
     
+
     
+function computerPlay(){
+
+    let choices = ["rock", "paper", "scissors"]
+    let random = choices[Math.floor(Math.random() * choices.length)];
+    return random;
+
+}
+
+function playerplay(){
+
+    return prompt ("Your choice:")
+
+
+
+}
+
+
+
+function playround(playerSelection, computerSelection){
+
+
+
+if (playerSelection==computerSelection){
+
+return "Its a tie!";
+
+
+
+} else if (playerSelection=="rock" && computerSelection=="scissors"){
+
+
+
+return "You win!";
+
+
+} else if (playerSelection=="paper" && computerSelection=="rock"){
+
+
+return "You win!";
+
+} else if (playerSelection=="scissors" && computerSelection=="paper"){
+
+
+return "You win!";
+
+
+} else {
+
+return "You lose!";
+
+
+}
+
+
+
+
+}
+
+
+let computerSelection=computerPlay();
+console.log(computerSelection);
+let playerSelection=playerplay();
+
+
+console.log(playround(playerSelection,computerSelection));
+
+
 
 
   </script>
