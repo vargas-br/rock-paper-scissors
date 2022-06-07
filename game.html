@@ -9,7 +9,10 @@
     // Your JavaScript goes here!
 
 
-    
+let userscore=0;
+let computerscore=0;
+
+   
 
     
 function computerPlay(){
@@ -17,6 +20,7 @@ function computerPlay(){
     let choices = ["rock", "paper", "scissors"]
     let random = choices[Math.floor(Math.random() * choices.length)];
     return random;
+    
 
 }
 
@@ -32,34 +36,38 @@ function playerplay(){
 
 function playround(playerSelection, computerSelection){
 
+playerSelection= playerplay();
+computerSelection= computerPlay();    
 
 
 if (playerSelection==computerSelection){
 
+   
 return "Its a tie!";
+
 
 
 
 } else if (playerSelection=="rock" && computerSelection=="scissors"){
 
-
-
+userscore++; 
 return "You win!";
 
 
 } else if (playerSelection=="paper" && computerSelection=="rock"){
 
-
+userscore++; 
 return "You win!";
 
 } else if (playerSelection=="scissors" && computerSelection=="paper"){
 
-
+userscore++; 
 return "You win!";
 
 
 } else {
 
+computerscore++;    
 return "You lose!";
 
 
@@ -70,13 +78,27 @@ return "You lose!";
 
 }
 
+function game(){
 
-let computerSelection=computerPlay();
-console.log(computerSelection);
-let playerSelection=playerplay();
+for (i=0;i<5;i++){
+
+playround();
+console.log (`You ${userscore} vs ${computerscore} cpu`);
 
 
-console.log(playround(playerSelection,computerSelection));
+}
+
+
+
+}
+
+game();
+
+
+
+
+
+
 
 
 
