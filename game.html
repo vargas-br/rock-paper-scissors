@@ -38,7 +38,7 @@ function playround(playerSelection, computerSelection){
 
 playerSelection= playerplay();
 computerSelection= computerPlay();    
-
+console.log (computerSelection);
 
 if (playerSelection==computerSelection){
 
@@ -83,6 +83,7 @@ function game(){
 for (i=0;i<5;i++){
 
 playround();
+
 console.log (`You ${userscore} vs ${computerscore} cpu`);
 
 
